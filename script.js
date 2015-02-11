@@ -2,6 +2,7 @@ $(document).ready( function(){
 
 	//START SCRIPT
 	$('.start').click(function(){
+		$('li').remove();
 
 		var n=prompt('Supply a number!')
 		
