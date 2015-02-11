@@ -5,26 +5,34 @@ $(document).ready( function(){
 
 		var n=prompt('Supply a number!')
 		
-		if ( $.isNumeric(n) && n%1==0 ) {
+		if (n>1000) {
+			alert("The entered value is too big, it's going to take a while...");
+		}
+
+		else if (n<0) {
+			alert('The value has to be bigger than 0');
+		}
+
+		else if ( $.isNumeric(n) && n%1==0 ) {
 			$('.num-sup').html(n);
 
 			var max=n;
 			for (var i=1 ; i<=max; i++) {
 
 				if (i%3==0 && i%5==0) {
-					$('.list').append('<li>fizzbuzz</li>');
+					$('.list').append('<li><span class="sign">></span>  fizzbuzz</li>');
 				}
 
 				else if (i%3==0) {
-					$('.list').append('<li>fizz</li>');
-				}
+					$('.list').append('<li><span class="sign">></span>  fizz</li>');
+				} 
 
 				else if (i%5==0) {
-					$('.list').append('<li>buzz</li>');
+					$('.list').append('<li><span class="sign">></span>  buzz</li>');
 				}
 
 				else {
-					$('.list').append('<li>'+i+'</li>')
+					$('.list').append('<li><span class="sign">></span>  '+i+'</li>')
 
 				}; // END IF
 
@@ -34,11 +42,7 @@ $(document).ready( function(){
 
 		else if (n%1!=0) {
 			
-			alert('The number supplied cannot have decimals value ');
-		}
-
-		else {
-			alert('The value supplied before is not a number');
+			alert('The number supplied has to be an integer');
 		};//END IF .ISNUMERIC CONDITION
 
 	}); //END OF START SCRIPT
