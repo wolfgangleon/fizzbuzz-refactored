@@ -4,7 +4,7 @@ $(document).ready( function(){
 	$('.start').click(function(){
 		$('li').remove();
 
-		var n=prompt('Supply a number!')
+		var n=prompt('Give me a number!')
 		
 		if (n>1000) {
 			alert("The entered value is too big, it's going to take a while...");
@@ -43,7 +43,7 @@ $(document).ready( function(){
 
 		else if (n%1!=0) {
 			
-			alert('The number supplied has to be an integer');
+			alert('It has to be an integer');
 		};//END IF .ISNUMERIC CONDITION
 
 	}); //END OF START SCRIPT
